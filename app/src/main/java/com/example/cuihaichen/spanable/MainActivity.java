@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View widget) {
                 Toast.makeText(MainActivity.this, "按键2被按下", Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                ds.setColor(ds.linkColor);
+                ds.setUnderlineText(false);
+                ds.setAlpha(50);
+            }
         }, 9, 11, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
         return s1;
     }
